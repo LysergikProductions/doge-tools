@@ -22,8 +22,7 @@ def disp_cur_xy():
 
 	COLS = get_terminal_size().columns
 	print('\033[Kx is {} and y is {}'.center(COLS).format(cur_x, cur_y), end='\r')
-	
+
 while True:
 	disp_cur_xy()
 	system('sleep 0.02')
-	
