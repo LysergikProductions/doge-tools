@@ -13,7 +13,7 @@ def get_mouse_xy():
 	mouse_position = p.winfo_pointerxy()
 	return mouse_position
 
-def disp_cur_pos():
+def disp_cur_xy():
 	from os import get_terminal_size
 
 	cursor_pos = get_mouse_xy()
@@ -24,5 +24,6 @@ def disp_cur_pos():
 	print('\033[Kx is {} and y is {}'.center(COLS).format(cur_x, cur_y), end='\r')
 	
 while True:
-	disp_cur_pos()
+	disp_cur_xy()
 	system('sleep 0.02')
+	
