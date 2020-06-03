@@ -1,14 +1,13 @@
 from os import system
 
-system('clear')
-print('')
+system('clear'); print('')
 
 def get_mouse_xy():
-	import tkinter
-
 	try:
+		import Tkinter
 		p = Tkinter.Tk()
 	except:
+		import tkinter
 		p = tkinter.Tk()
 
 	mouse_position = p.winfo_pointerxy()
@@ -26,4 +25,4 @@ def disp_cur_pos():
 	
 while True:
 	disp_cur_pos()
-	system('sleep 0.01')
+	system('sleep 0.02')
